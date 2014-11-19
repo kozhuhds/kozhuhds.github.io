@@ -10,7 +10,7 @@ gtd.app.views.appView = (function () {
         var appView = new gtd.View({
             template: $('#appView').html(),
             elem: 'div',
-            url: '/gtd_taucraft/static/js/app/data/data.json',
+            url: '/static/js/app/data/data.json',
             events: function ( $view ) {
                 $view.find('.card').dragable({
                     dropClass: '.gtd-columns__item',
