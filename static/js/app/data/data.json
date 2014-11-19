@@ -1,0 +1,28 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "text": "#4 js error on settings page",
+      "type": 0
+    },
+    {
+      "id": 2,
+      "text": "#1 Login page",
+      "type": 1
+    }
+  ],
+  "inprogress": [
+    {
+      "id": 3,
+      "text": "#5 js error on index page",
+      "type": 0
+    }
+  ],
+  "done": [
+    {
+      "id": 4,
+      "text": "#4 install package",
+      "type": 0
+    }
+  ]
+}
