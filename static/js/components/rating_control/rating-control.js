@@ -75,7 +75,7 @@ Polymer('rating-control', {
         for(var i = number-1; i >= 0 ; i--) {
             this.stars[i].markedClass = true;
         }
-        
+
         this.save();
 
     }
