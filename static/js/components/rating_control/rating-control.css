@@ -2,6 +2,7 @@ ul {
     padding: 0;
     overflow: hidden;
     display: inline-block;
+    cursor: pointer;
 }
     ul li {
         list-style: none;
@@ -51,4 +52,7 @@ ul {
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-star:before { content: '\e800'; } /* '' */
+.icon-star:before { content: '\e800'; }
+.i-code {
+    display: none;
+}
