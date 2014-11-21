@@ -2,143 +2,15 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="static/js/components/webcomponentsjs/webcomponents.js"></script>
 
-    <!-- lib -->
-    <script type="text/javascript" src="static/js/lib/jquery.js"></script>
-    <script type="text/javascript" src="static/js/lib/underscore.js"></script>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/common.css">
 
-    <!-- app -->
-    <script type="text/javascript" src="static/js/app/config.js"></script>
-    <script type="text/javascript" src="static/js/app/app.js"></script>
-    <script type="text/javascript" src="static/js/app/views/appView.js"></script>
-    <script type="text/javascript" src="static/js/app/core/gtd.popup.js"></script>
-    <script type="text/javascript" src="static/js/app/core/gtd.model.js"></script>
-    <script type="text/javascript" src="static/js/app/core/gtd.view.js"></script>
-    <script type="text/javascript" src="static/js/app/plugins/gtd.dragable.js"></script>
-
-    <link rel="stylesheet" href="static/css/reset.css" />
-    <link rel="stylesheet" href="static/css/common.css" />
+    <link rel="import" href="static/js/components/rating_control/rating-control.html"/>
     <title></title>
 </head>
 <body>
-    <header class="main-header">
-        <button class="add-card-btn">+</button>
-
-    </header>
-    <div id="appContainer" class="wrapper ">
-
-    </div>
-
+    <rating-control></rating-control>
 </body>
 </html>
-
-<script type="text/html" id="addTaskPopup">
-    <div class="add-task-popup">
-        <div class="add-task-popup__body">
-            <div class="control">
-                <label for="task-type-control">Type</label>
-                <select id="task-type-control" name="taskType">
-                    <option value="0">Task</option>
-                    <option value="1">Bug</option>
-                </select>
-            </div>
-            <div class="control">
-                <textarea class="add-task-popup__text" placeholder="Task text"></textarea>
-            </div>
-        </div>
-        <div class="add-task-popup__footer">
-            <button class="btn success add-task-popup__btn">Add</button>
-            <button class="btn add-task-popup__cancel">Cancel</button>
-        </div>
-    </div>
-</script>
-
-<script type="text/html" id="appView">
-    <section class="gtd-columns ">
-        <div class="gtd-columns__item " data-section="todo">
-            <div class="gtd-columns__head">
-                <h1>ToDo</h1>
-            </div>
-            <div class="gtd-columns__body">
-                {{ for(var i in data.todo) { }}
-                    <div class="card {{- data.todo[i].type == 0 ? 'task': 'bug'}} {{- data.todo[i].isEditing ? 'isEditing': ''}}" data-id="{{= data.todo[i].id}}" data-section="todo">
-                        <p>{{= data.todo[i].text}}</p>
-                        <div class="control">
-                            <label for="task-type-control">Type</label>
-                            <select class="task-type-control" name="taskType" value="{{= data.todo[i].type}}">
-                                <option value="0" {{- data.todo[i].type == 0 ? 'selected': ''}}>Task</option>
-                                <option value="1" {{- data.todo[i].type == 1 ? 'selected': ''}}>Bug</option>
-                            </select>
-                        </div>
-                        <div class="control">
-                            <textarea class="card-edit__text">{{= data.todo[i].text}}</textarea>
-                        </div>
-                        <div class="control cfix">
-                            <button class="btn success add-task-popup__btn">Save</button>
-                            <button class="btn add-task-popup__cancel">Cancel</button>
-                        </div>
-                        <a href class="card-delete__btn">delete</a>
-                        <a href class="card-edit__btn">edit</a>
-                    </div>
-                {{ } }}
-            </div>
-        </div>
-        <div class="gtd-columns__item " data-section="inprogress">
-            <div class="gtd-columns__head">
-                <h1>In Progress</h1>
-            </div>
-            <div class="gtd-columns__body">
-                {{ for(var i in data.inprogress) { }}
-                <div class="card {{- data.inprogress[i].type == 0 ? 'task': 'bug'}} {{- data.inprogress[i].isEditing ? 'isEditing': ''}}" data-id="{{= data.inprogress[i].id}}" data-section="inprogress">
-                    <p>{{= data.inprogress[i].text}}</p>
-
-                    <div class="control">
-                        <label for="task-type-control">Type</label>
-                        <select class="task-type-control" name="taskType">
-                            <option value="0" {{- data.inprogress[i].type == 0 ? 'selected': ''}}>Task</option>
-                            <option value="1" {{- data.inprogress[i].type == 1 ? 'selected': ''}}>Bug</option>
-                        </select>
-                    </div>
-                    <div class="control">
-                        <textarea class="card-edit__text">{{= data.inprogress[i].text}}</textarea>
-                    </div>
-                    <div class="control cfix">
-                        <button class="btn success add-task-popup__btn">Save</button>
-                        <button class="btn add-task-popup__cancel">Cancel</button>
-                    </div>
-                    <a href class="card-delete__btn">delete</a>
-                    <a href class="card-edit__btn">edit</a>
-                </div>
-                {{ } }}
-            </div>
-        </div>
-        <div class="gtd-columns__item " data-section="done">
-            <div class="gtd-columns__head">
-                <h1>Done</h1>
-            </div>
-            <div class="gtd-columns__body">
-                {{ for(var i in data.done) { }}
-                <div class="card {{- data.done[i].type == 0 ? 'task': 'bug'}} {{- data.done[i].isEditing ? 'isEditing': ''}}" data-id="{{= data.done[i].id}}" data-section="done">
-                    <p>{{= data.done[i].text}}</p>
-                    <div class="control">
-                        <label for="task-type-control">Type</label>
-                        <select class="task-type-control" name="taskType">
-                            <option value="0" {{- data.done[i].type == 0 ? 'selected': ''}}>Task</option>
-                            <option value="1" {{- data.done[i].type == 1 ? 'selected': ''}}>Bug</option>
-                        </select>
-                    </div>
-                    <div class="control">
-                        <textarea class="card-edit__text">{{= data.done[i].text}}</textarea>
-                    </div>
-                    <div class="control cfix">
-                        <button class="btn success add-task-popup__btn">Save</button>
-                        <button class="btn add-task-popup__cancel">Cancel</button>
-                    </div>
-                    <a href class="card-delete__btn">delete</a>
-                    <a href class="card-edit__btn">edit</a>
-                </div>
-                {{ } }}
-            </div>
-        </div>
-    </section>
-</script>

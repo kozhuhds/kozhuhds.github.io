@@ -1,0 +1,23 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="rating-control">
+    <template>
+        <link rel="stylesheet" href="rating-control.css">
+        <ul on-mouseout="{{onParentUnhovered}}">
+            <template repeat="{{s in stars}}">
+                <li>
+                    <a href
+                       class="star {{s.activeClass ? 'active' : ''}} {{s.markedClass ? 'chosen' : ''}}"
+                       title="{{s.number}}"
+                       data-number="{{s.number}}"
+                       on-mouseover='{{onHovered}}'
+                       on-click="{{setRating}}">
+                        <i class="icon-star"></i>
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </template>
+
+    <script src="rating-control.js"></script>
+</polymer-element>
