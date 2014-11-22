@@ -4,7 +4,7 @@
 
 Polymer('rating-control', {
     ready: function() {
-        var count = 10;
+        var count = 5;
 
 
         if ( localStorage && !localStorage.getItem('stars') ) {

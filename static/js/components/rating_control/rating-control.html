@@ -7,13 +7,12 @@
             <template repeat="{{s in stars}}">
                 <li>
                     <a href
-                       class="star {{s.activeClass ? 'active' : ''}} {{s.markedClass ? 'chosen' : ''}}"
+                       class="star"
                        title="{{s.number}}"
                        data-number="{{s.number}}"
                        on-mouseover='{{onHovered}}'
                        on-click="{{setRating}}">
-                        <i class="icon-star"></i>
-                        <span class="i-code">0xe800</span>
+                        <i class="icon star-i  {{s.activeClass ? 'active' : ''}} {{s.markedClass ? 'chosen' : ''}}"></i>
                     </a>
                 </li>
             </template>
