@@ -29,14 +29,16 @@
                 this.setHelpUrl('http://www.example.com/');
                 this.setColour(60);
                 this.appendDummyInput()
+                        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, "*"))
                         .appendField("Питание на конференции");
+                this.appendDummyInput();
                 this.appendValueInput("coffee")
                         .appendField("Кофе");
                 this.appendValueInput("water")
                         .appendField("Вода");
                 this.appendValueInput("sugar")
                         .appendField("Сахар");
-                this.setOutput(true, "eat");
+                this.setOutput(true, "Resources");
                 this.setTooltip('');
             }
         };
