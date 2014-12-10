@@ -14,7 +14,9 @@
                 this.setHelpUrl('http://www.example.com/');
                 this.setColour(120);
                 this.appendDummyInput()
+                        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, "*"))
                         .appendField("Конфернеция");
+                this.appendDummyInput();
                 this.appendValueInput("food")
                         .setCheck("eat")
                         .appendField("Питание");
