@@ -34,12 +34,15 @@
                         .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, "*"))
                         .appendField("Питание на конференции");
                 this.appendDummyInput();
-                this.appendValueInput("coffee")
-                        .appendField("Кофе");
-                this.appendValueInput("water")
-                        .appendField("Вода");
-                this.appendValueInput("sugar")
-                        .appendField("Сахар");
+                this.appendDummyInput()
+                        .appendField("Кофе")
+                        .appendField(new Blockly.FieldDropdown([["не сделано", "0"], ["сделано", "1"]]), "coffee_done");
+                this.appendDummyInput()
+                        .appendField("Вода")
+                        .appendField(new Blockly.FieldDropdown([["не сделано", "0"], ["сделано", "1"]]), "water_done");
+                this.appendDummyInput()
+                        .appendField("Сахар")
+                        .appendField(new Blockly.FieldDropdown([["не сделано", "0"], ["сделано", "1"]]), "sugar_done");
                 this.setOutput(true, "Resources");
                 this.setTooltip('');
             }
