@@ -1,0 +1,20 @@
+<svg id="left-menu-svg">
+    <foreignObject width="316" height="100%">
+        <div class="left-section">
+                <ul class="left-menu">
+                    {{#each categories}}
+                        <li data-category-id="{{id}}">{{name}}</li>
+                    {{/each}}
+                </ul>
+
+                {{#each categories}}
+                    <ul class="left-menu-sub" data-category-id="{{id}}">
+                        {{#each items}}
+                            <li>{{{svg}}}</li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+
+        </div>
+    </foreignObject>
+</svg>

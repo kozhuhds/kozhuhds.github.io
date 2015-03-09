@@ -1,0 +1,35 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "People",
+      "type": "category",
+      "items": [
+        {
+          "name": "conference",
+          "type": "block",
+          "svg": "<svg class='blockly-fake-item' width='200' name='eat'><g><rect fill-opacity='0' width='199.162109375' height='126' x='16' y='8'></rect><g class='blocklyDraggable' transform='translate(16, 8)'><path class='blocklyPathDark' transform='translate(1, 1)' fill='#646437' d='m 0,0 H 191.162109375 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z'></path><path class='blocklyPath' fill='#a6a65b' d='m 0,0 H 191.162109375 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z'></path><path class='blocklyPathLight' stroke='#c1c18c' d='m 1,1 H 191.162109375 M 190.162109375,1 M 190.162109375,26 M 190.162109375,51 M 190.162109375,76 M 190.162109375,101 M 1,125 V 19 m -7.36,-1 q -1.52,-5.5 0,-11 m 7.36,1 V 1 H 2'></path><g transform='translate(10, 18)'><image height='15px' width='15px' y='-12' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='https://www.gstatic.com/codesite/ph/images/star_on.gif'></image></g><text class='blocklyText' transform='translate(35, 18)'>Питание&nbsp;на&nbsp;конференции</text><text class='blocklyText' transform='translate(10, 68)'>Кофе</text><g class='blocklyEditableText' transform='translate(51.3359375, 68)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g><text class='blocklyText' transform='translate(10, 93)'>Вода</text><g class='blocklyEditableText' transform='translate(48.623046875, 93)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g><text class='blocklyText' transform='translate(10, 118)'>Сахар</text><g class='blocklyEditableText' transform='translate(54.6875, 118)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g></g></g></svg>"
+        },
+
+        {
+          "name": "eat",
+          "type": "block",
+          "svg": "<svg class='blockly-fake-item' width='200' name='conference'><g><g class='blocklyDraggable'><path class='blocklyPath' fill='#5ba65b' stroke='black' d='m 0,8 A 8,8 0 0,1 8,0 H 148.99856567382812 v 25 v 25 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 112.21903991699219 l -6,4 -3,0 -6,-4 h -7 a 8,8 0 0,0 -8,8 v 9 a 8,8 0 0,0 8,8 H 148.99856567382812 v 10 H 8 a 8,8 0 0,1 -8,-8 z'></path><g transform='translate(10, 18)'><image height='15px' width='15px' y='-12' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='https://www.gstatic.com/codesite/ph/images/star_on.gif'></image></g><text class='blocklyText' transform='translate(35, 18)'>Конфернеция</text><text class='blocklyText' transform='translate(10, 68)'>Питание</text><text class='blocklyText' transform='translate(10, 93)'>Спикеры</text></g></g></svg>"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Other",
+      "type": "category",
+      "items": [
+        {
+          "name": "conference",
+          "type": "block",
+          "svg": "<svg class='blockly-fake-item' width='200' name='eat'><g><rect fill-opacity='0' width='199.162109375' height='126' x='16' y='8'></rect><g class='blocklyDraggable' transform='translate(16, 8)'><path class='blocklyPathDark' transform='translate(1, 1)' fill='#646437' d='m 0,0 H 191.162109375 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z'></path><path class='blocklyPath' fill='#a6a65b' d='m 0,0 H 191.162109375 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z'></path><path class='blocklyPathLight' stroke='#c1c18c' d='m 1,1 H 191.162109375 M 190.162109375,1 M 190.162109375,26 M 190.162109375,51 M 190.162109375,76 M 190.162109375,101 M 1,125 V 19 m -7.36,-1 q -1.52,-5.5 0,-11 m 7.36,1 V 1 H 2'></path><g transform='translate(10, 18)'><image height='15px' width='15px' y='-12' xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='https://www.gstatic.com/codesite/ph/images/star_on.gif'></image></g><text class='blocklyText' transform='translate(35, 18)'>Питание&nbsp;на&nbsp;конференции</text><text class='blocklyText' transform='translate(10, 68)'>Кофе</text><g class='blocklyEditableText' transform='translate(51.3359375, 68)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g><text class='blocklyText' transform='translate(10, 93)'>Вода</text><g class='blocklyEditableText' transform='translate(48.623046875, 93)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g><text class='blocklyText' transform='translate(10, 118)'>Сахар</text><g class='blocklyEditableText' transform='translate(54.6875, 118)' style='cursor: default;'><rect rx='4' ry='4' x='-5' y='-12' height='16' width='84.537109375'></rect><text class='blocklyText'>не&nbsp;сделано<tspan style='fill: rgb(166, 166, 91);'> ▾</tspan></text></g></g></g></svg>"
+        }
+      ]
+    }
+  ]
+}
+
