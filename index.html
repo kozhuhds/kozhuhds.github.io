@@ -1,63 +1,77 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-
-    <link rel="stylesheet" type="text/css" href="static/css/common.css" />
-    <!--<link rel="import" type="text/html" href="static/js/circle/circle.html" />-->
-
-    <script type="text/javascript" src="static/js/lib/handlebars.js"></script>
-    <script type="text/javascript" src="static/js/lib/x2js.js"></script>
-    <script type="text/javascript" src="static/js/lib/snap.svg.js"></script>
-    <script type="text/javascript" src="static/js/lib/snap.connector.js"></script>
-    <script type="text/javascript" src="static/js/lib/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="static/js/lib/blockly/lang/en.js"></script>
-    <script type="text/javascript" src="closure-library/closure/goog/base.js"></script>
-    <script type="text/javascript" src="static/js/app.js"></script>
-    <script type="text/javascript" src="static/js/ui/app.ui.js"></script>
-    <script type="text/javascript" src="static/js/circle/circle.js"></script>
-    <script type="text/javascript" src="static/js/phblock/phblock.js"></script>
-    <script type="text/javascript" src="static/js/popup/popup.js"></script>
-
-
-    <script type="text/javascript" src="static/js/blocks.js"></script>
-
-    <title></title>
-
-    <script type="text/html" id="confBlock">
-        <svg class="blockly-fake-item" width="200" name="conference"><g><g class="blocklyDraggable"><path class="blocklyPath" fill="#5ba65b" stroke="black" d="m 0,8 A 8,8 0 0,1 8,0 H 148.99856567382812 v 25 v 25 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 5 H 112.21903991699219 l -6,4 -3,0 -6,-4 h -7 a 8,8 0 0,0 -8,8 v 9 a 8,8 0 0,0 8,8 H 148.99856567382812 v 10 H 8 a 8,8 0 0,1 -8,-8 z"></path><g transform="translate(10, 18)"><image height="15px" width="15px" y="-12" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.gstatic.com/codesite/ph/images/star_on.gif"></image></g><text class="blocklyText" transform="translate(35, 18)">Конфернеция</text><text class="blocklyText" transform="translate(10, 68)">Питание</text><text class="blocklyText" transform="translate(10, 93)">Спикеры</text></g></g></svg>
-        <svg class="blockly-fake-item" width="200" name="eat"><g class="blocklyDraggable"><path class="blocklyPathDark" transform="translate(1, 1)" fill="#646437" d="m 0,0 H 223.56118774414062 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z"></path><path class="blocklyPath" fill="#a6a65b" d="m 0,0 H 223.56118774414062 v 25 v 25 v 25 v 25 v 25 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z"></path><path class="blocklyPathLight" stroke="#c1c18c" d="m 1,1 H 223.56118774414062 M 222.56118774414062,1 M 222.56118774414062,26 M 222.56118774414062,51 M 222.56118774414062,76 M 222.56118774414062,101 M 1,125 V 19 m -7.36,-1 q -1.52,-5.5 0,-11 m 7.36,1 V 1 H 2"></path><g transform="translate(10, 18)"><image height="15px" width="15px" y="-12" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.gstatic.com/codesite/ph/images/star_on.gif"></image></g><text class="blocklyText" transform="translate(35, 18)">Питание&nbsp;на&nbsp;конференции</text><text class="blocklyText" transform="translate(10, 68)">Кофе</text><g class="blocklyEditableText" transform="translate(58.28202819824219, 68)" style="cursor: default;"><rect rx="4" ry="4" x="-5" y="-12" height="16" width="101.05938720703125"></rect><text class="blocklyText">не&nbsp;сделано<tspan style="fill: rgb(166, 166, 91);"> ▾</tspan></text></g><text class="blocklyText" transform="translate(10, 93)">Вода</text><g class="blocklyEditableText" transform="translate(54.9677734375, 93)" style="cursor: default;"><rect rx="4" ry="4" x="-5" y="-12" height="16" width="80.68000793457031"></rect><text class="blocklyText">сделано<tspan style="fill: rgb(166, 166, 91);"> ▾</tspan></text></g><text class="blocklyText" transform="translate(10, 118)">Сахар</text><g class="blocklyEditableText" transform="translate(62.37651062011719, 118)" style="cursor: default;"><rect rx="4" ry="4" x="-5" y="-12" height="16" width="80.68000793457031"></rect><text class="blocklyText">сделано<tspan style="fill: rgb(166, 166, 91);"> ▾</tspan></text></g></g></svg>
-    </script>
+<head>
+    <title>LDI Demo</title>
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <div id="blocklyDiv"></div>
-    <div id="changeBgBlock">
-        <label for="circleBgUrl">Image Url</label>
-        <input id="circleBgUrl" type="url"/>
+<div class="loader-bg js-loader">
+    <div class="cssload-loader"></div>
+</div>
+<a id="overlay">
+    <div id="play">
+        <img src="img/play.png" height="200" width="200">
+        <div id="adjust" class="m-t">Click to play the presentation</div>
     </div>
+</a>
+<audio id="audio-player">
+    <source src="data/page2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<div class="reveal">
+    <div class="slides">
+        <!-- slide 0 -->
+        <section>
+            <div class="video1-box">
+                <video id="video0" preload="auto">
+                    <source src="./data/steve1.mp4" type="video/mp4">
+                    This browser does not support the video tag.
+                </video>
+                <p class="fragment fade-in">Jim Smith</p>
+            </div>
+            <div class="logo-box">
+                <img src="img/gps-logo-horz.png" alt=""/>
+            </div>
+            <div class="right-col-sl-0">
+                <img src="img/company.png" class="fragment fade-in" alt="">
+                <img src="img/retirement_picture.png" class="m-t fragment fade-in" alt=""/>
+                <button class="btn m-t fragment fade-in next-btn">click here to get started</button>
+            </div>
+        </section>
 
-<!--<div id="app-section" style="height: 480px; width: 1000px;"></div>-->
+        <!-- slide 1 -->
+        <section class="centered-fragments">
+            <div class="fragment fade-in fragment-item-centered">
+                <div class="fragment fade-out">
+                    <img src="img/pic1.png" alt=""/>
+                    <h2><span class="strong-text">84%</span> of Americans have NEVER completed a retirement plan</h2>
+                </div>
+            </div>
+            <div class="fragment fade-in fragment-item-bottom">
+                <img src="img/arrow.png" class="inline" alt=""/>
+                <h2 class="inline">don’t be intimidated</h2>
+            </div>
+            <div class="fragment fade-in fragment-item-top">
+                <div class="fragment fade-out">
+                    <img src="img/pic3.png" alt=""/>
+                </div>
+            </div>
 
-    <script>
-        window.onload = function () {
-//            Blockly.inject(document.getElementById('app-section'),
-//                    {toolbox: document.getElementById('toolbox')});
-//
-//            document.getElementsByClassName("blocklySvg")[0].setAttribute('id', "app-canvas");
-            app.initModule();
-        }
-    </script>
+            <div class="fragment fade-in fragment-item-top">
+                <div class="fragment fade-out">
+                    <img src="img/pic4.png" alt=""/>
+                </div>
+            </div>
+            <div class="fragment fade-in fragment-item-top">
+                <img src="img/pic2.png" alt=""/>
+            </div>
 
-
-<xml id="toolbox" style="display: none">
-    <category name="people">
-        <block type="conference"></block>
-        <block type="done"></block>
-        <block type="speaker"></block>
-    </category>
-    <category name="eat">
-        <block type="eat"></block>
-    </category>
-</xml>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <section>
+            End
+        </section>
+    </div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
