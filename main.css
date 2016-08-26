@@ -1811,15 +1811,25 @@ button {
   -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.block-1-sl-4 ul {
+.block-1-sl-4 .hobbies-wrap {
+  overflow: hidden;
+}
+.block-1-sl-4 .hobbies-list {
+  height: 419px;
   margin: 0;
   text-align: right;
+  overflow-y: scroll;
+  margin-right: -32px;
 }
-.block-1-sl-4 ul li {
-  padding: 5px 17px;
+.block-1-sl-4 .hobbies-list li {
+  cursor: pointer;
+  padding: 5px 50px 5px 17px;
   list-style: none;
 }
-.block-1-sl-4 ul li.active {
+.block-1-sl-4 .hobbies-list li:hover {
+  background: #e7e7e7;
+}
+.block-1-sl-4 .hobbies-list li.active {
   background: #ccc;
 }
 .block-2-sl-4 {
@@ -1973,6 +1983,12 @@ button {
 .block-3-sl-9 {
   font-size: 20px !important;
 }
+.block-3-sl-9 .savings-table-wrap {
+  height: 165px;
+}
+.block-3-sl-9 .savings-table-wrap .savings-table {
+  height: 165px;
+}
 .circle {
   width: 178px;
   height: 178px;
@@ -2099,15 +2115,16 @@ button {
   margin-top: 112px !important;
 }
 .fund-block {
+  cursor: ew-resize;
   background: rgba(0, 0, 0, 0.06);
   left: 305px;
   width: 140px;
   height: 566px;
-  top: 12px;
+  top: 0;
   position: absolute;
   border: 2px solid #4995d1 !important;
-  -webkit-transition: all .7s ease;
-  transition: all .7s ease;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 .fund-block img {
   width: 100px;
@@ -2258,6 +2275,57 @@ button {
   width: 700px;
   position: absolute;
   left: 254px;
+}
+.pause-btn {
+  z-index: 99999;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  background: none;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 20px;
+  height: 26px;
+}
+.pause-btn.active {
+  display: block;
+}
+.pause-btn:hover:after,
+.pause-btn:hover:before {
+  background: rgba(251, 65, 14, 0.99);
+}
+.pause-btn:after,
+.pause-btn:before {
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 26px;
+  background: #000;
+  left: 0;
+  top: 0;
+}
+.pause-btn:after {
+  right: -2px;
+  left: auto;
+}
+.savings-table-wrap {
+  height: 400px;
+  overflow: hidden;
+}
+.savings-table-wrap .savings-table {
+  height: 400px;
+  display: block;
+  overflow-y: scroll;
+  margin-right: -30px;
+}
+.savings-table-wrap .savings-table tr.active {
+  font-weight: bold;
+}
+.savings-table-wrap .savings-table tr:hover {
+  background: #e7e7e7;
+  cursor: pointer;
 }
 .loader-bg {
   background: #ffffff;

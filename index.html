@@ -13,6 +13,7 @@
         <div id="adjust" class="m-t">Click to play the presentation</div>
     </div>
 </a>
+<button class="pause-btn"></button>
 <audio id="audio-player">
     <source src="" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -93,17 +94,19 @@
         <!-- Slide 4 -->
         <section>
             <div class="block-1-sl-4 fragment fade-in">
-                <ul class="inline">
-                    <li>fishing</li>
-                    <li>gardening</li>
-                    <li>going to videos</li>
-                    <li>golfing</li>
-                    <li>hiking</li>
-                    <li>horseback riding</li>
-                    <li>listening to music</li>
-                    <li>motorcycling</li>
-                    <li>Lossesting</li>
-                </ul>
+                <div class="inline hobbies-wrap">
+                    <ul class="hobbies-list">
+                        <li>fishing</li>
+                        <li>gardening</li>
+                        <li>going to videos</li>
+                        <li>golfing</li>
+                        <li>hiking</li>
+                        <li>horseback riding</li>
+                        <li>listening to music</li>
+                        <li>motorcycling</li>
+                        <li>Lossesting</li>
+                    </ul>
+                </div>
                 <img class="inline m-l" src="img/arrow2.png" alt="" width="66"/>
             </div>
             <div class="block-2-sl-4">
@@ -167,8 +170,8 @@
                 </div>
             </div>
             <div class="block-3-sl-5 fragment fade-in" data-fragment-index="9">
-                <button class="btn blue">yes</button>
-                <button class="btn red">no</button>
+                <button class="btn blue js-yes-btn">yes</button>
+                <button class="btn red js-no-btn">no</button>
             </div>
             <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="10">continue</button>
         </section>
@@ -234,36 +237,68 @@
         </section>
         <!-- slide 8 -->
         <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>additional savings</th>
-                        <th>employer match YOU GAIN each YEAR</th>
-                        <th>account balance YOU GAIN at RETIREMENT</th>
-                        <th>take-home YOU LOSE each MONTH</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="green">1%</td>
-                        <td class="green">$500</td>
-                        <td class="green">$32,076</td>
-                        <td class="warning">-$35.00</td>
-                    </tr>
-                    <tr>
-                        <td class="green">2%</td>
-                        <td class="green">$1,000</td>
-                        <td class="green">$64,152</td>
-                        <td class="warning">-$70.00</td>
-                    </tr>
-                    <tr>
-                        <td class="green"><strong>3%</strong></td>
-                        <td class="green"><strong>$1,500</strong></td>
-                        <td class="green"><strong>$96,228</strong></td>
-                        <td class="warning"><strong>-$105.00</strong></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="savings-table-wrap">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th>additional savings</th>
+                            <th>employer match YOU GAIN each YEAR</th>
+                            <th>account balance YOU GAIN at RETIREMENT</th>
+                            <th>take-home YOU LOSE each MONTH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="green">1%</td>
+                            <td class="green">$500</td>
+                            <td class="green">$32,076</td>
+                            <td class="warning">-$35.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">2%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">3%</td>
+                            <td class="green">$1,500</td>
+                            <td class="green">$96,228</td>
+                            <td class="warning">-$105.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">4%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">5%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">6%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">7%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">8%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="block-1-sl-8 fragment fade-in">
                 <img src="img/save_money.png" alt=""/>
             </div>
@@ -294,7 +329,8 @@
                 <h3 class="fragment fade-out">70% of employees would take the majority of their next pay raise and use it for Retirement</h3>
             </div>
             <div class="block-3-sl-9 fragment fade-in">
-                <table>
+                <div class="savings-table-wrap">
+                    <table class="savings-table">
                     <thead>
                     <tr>
                         <th>additional savings <span class="warning">starting 1/1/2017</span></th>
@@ -324,12 +360,28 @@
                         <td class="warning">-$140.00</td>
                     </tr>
                     <tr>
-                        <td class="green"><strong>5%</strong></td>
-                        <td class="green"><strong>$106,916</strong></td>
-                        <td class="warning"><strong>-$175.00</strong></td>
+                        <td class="green">5%</td>
+                        <td class="green">$106,916</td>
+                        <td class="warning">-$175.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">6%</td>
+                        <td class="green">$106,916</td>
+                        <td class="warning">-$175.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">7%</td>
+                        <td class="green">$106,916</td>
+                        <td class="warning">-$175.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">8%</td>
+                        <td class="green">$106,916</td>
+                        <td class="warning">-$175.00</td>
                     </tr>
                     </tbody>
                 </table>
+                </div>
                 <img src="img/better-tomorrow.png" class="m-t" alt=""/>
             </div>
             <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
@@ -525,7 +577,7 @@
                     <div class="baskets desc">
                         <div class="inline basket-item fragment fade-in" data-fragment-index="1">
                             <img src="img/basket.png" alt=""/>
-                            <p>625,371</p>
+                            <p>$625,371</p>
                         </div>
                         <div class="inline basket-item fragment fade-in" data-fragment-index="2">
                             <img src="img/basket.png" alt=""/>
@@ -560,7 +612,7 @@
         </section>
         <!-- Slide 14 -->
         <section>
-            <div class="fund-block fragment fade-in">
+            <div id="js-fund-block" class="fund-block fragment fade-in">
                 <p class="info">My Fund</p>
                 <img src="img/guarantees.png" alt=""/>
             </div>
