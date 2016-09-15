@@ -1842,6 +1842,16 @@ button {
   top: 0;
   right: 0;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .block-2-sl-4.iefix {
+    height: 228px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .block-2-sl-4.iefix {
+    height: 228px;
+  }
+}
 .block-2-sl-4 img {
   position: absolute;
   left: 0;
@@ -2030,6 +2040,7 @@ button {
   border: 3px solid #4995d1;
 }
 .block-2-sl-11 {
+  white-space: nowrap;
   text-align: left;
 }
 .block-2-sl-11 .guarantees {
@@ -2065,8 +2076,22 @@ button {
   font-size: 20px !important;
 }
 .block-2-sl-12 {
-  width: 692px;
-  overflow: hidden;
+  width: 711px;
+  white-space: nowrap;
+}
+@supports (-moz-appearance:meterbar) {
+  .block-2-sl-12 {
+    white-space: normal;
+  }
+}
+.block-2-sl-12 .right-section {
+  margin-right: -23px;
+}
+.block-2-sl-12 .right-sl-13 {
+  margin-right: -66px;
+}
+.block-2-sl-12 .left-sl-13 {
+  margin-left: -44px;
 }
 .block-2-sl-12 p {
   text-align: center;
@@ -2177,10 +2202,52 @@ button {
   width: 100px;
   margin-top: -424px !important;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .img-sl-13 {
+    position: absolute;
+    top: 100px;
+    left: 81px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .img-sl-13 {
+    position: absolute;
+    top: 100px;
+    left: 81px;
+  }
+}
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                 not supported by any browser */
+}
 .fund-block {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                 not supported by any browser */
   cursor: ew-resize;
   background: rgba(0, 0, 0, 0.06);
-  left: 305px;
+  left: 295px;
   width: 140px;
   height: 566px;
   top: 0;
@@ -2215,7 +2282,7 @@ button {
   background: url(img/doc.png) no-repeat center;
   position: absolute;
   left: -36px;
-  top: 157px;
+  top: 82px;
 }
 .doc .date {
   position: absolute;
@@ -2256,9 +2323,16 @@ button {
 .block-1-sl-15 {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 83px;
   width: 464px;
   text-align: left;
+}
+.block-1-sl-15 h4 {
+  font-size: 32px;
+  margin-bottom: 15px !important;
+}
+.block-1-sl-15 ul li {
+  font-size: 33px;
 }
 .scale-sl-15 {
   -webkit-transform: scale(0.8);
@@ -2290,8 +2364,22 @@ button {
 .block-4-sl-16,
 .block-5-sl-16 {
   position: absolute;
-  right: 131px;
-  top: 125px;
+  right: 105px;
+  top: 127px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .block-4-sl-16,
+  .block-5-sl-16 {
+    right: 119px;
+    top: 125px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .block-4-sl-16,
+  .block-5-sl-16 {
+    right: 119px;
+    top: 125px;
+  }
 }
 .block-4-sl-16 p,
 .block-5-sl-16 p {
@@ -2304,10 +2392,32 @@ button {
   left: -113px;
   top: 19px;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .block-1-sl-10 {
+    position: relative;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .block-1-sl-10 {
+    position: relative;
+  }
+}
 .block-5-sl-16 {
   right: auto;
-  top: 125px;
-  left: 162px;
+  top: 107px;
+  left: 160px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .block-5-sl-16 {
+    top: 111px;
+    left: 165px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .block-5-sl-16 {
+    top: 111px;
+    left: 165px;
+  }
 }
 .block-5-sl-16 .arrow-right {
   position: absolute;
@@ -2328,6 +2438,7 @@ button {
 .block-1-sl-17 p {
   width: 628px;
   margin-right: 20px;
+  font-size: 36px;
 }
 .block-2-sl-17 {
   position: absolute;
@@ -2338,6 +2449,9 @@ button {
   width: 700px;
   position: absolute;
   left: 254px;
+}
+.block-3-sl-17 h3 {
+  font-size: 40px;
 }
 .pause-btn {
   z-index: 99999;
@@ -2354,6 +2468,16 @@ button {
 }
 .pause-btn.active {
   display: block;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .pause-btn {
+    width: 25px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .pause-btn {
+    width: 25px;
+  }
 }
 .pause-btn:hover:after,
 .pause-btn:hover:before {
@@ -2373,15 +2497,45 @@ button {
   right: -2px;
   left: auto;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .pause-btn:after {
+    right: 2px;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .pause-btn:after {
+    right: 2px;
+  }
+}
 .savings-table-wrap {
   height: 400px;
   overflow: hidden;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .savings-table-wrap {
+    overflow-y: scroll;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .savings-table-wrap {
+    overflow-y: scroll;
+  }
 }
 .savings-table-wrap .savings-table {
   height: 400px;
   display: block;
   overflow-y: scroll;
   margin-right: -30px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .savings-table-wrap .savings-table tr th {
+    font-size: .7em;
+  }
+}
+@supports (-ms-accelerator:true) {
+  .savings-table-wrap .savings-table tr th {
+    font-size: .7em;
+  }
 }
 .savings-table-wrap .savings-table tr.active {
   font-weight: bold;
@@ -2401,6 +2555,37 @@ button {
   transform: scale(1.1);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+}
+.edge-14 .savings-table-wrap {
+  overflow-y: scroll;
+}
+.edge-14 .savings-table-wrap .savings-table tr th {
+  font-size: .7em;
+}
+.edge-14 .pause-btn {
+  width: 25px;
+}
+.edge-14 .pause-btn:after {
+  right: 2px;
+}
+.edge-14 .block-4-sl-16 {
+  right: 119px;
+  top: 125px;
+}
+.edge-14 .block-5-sl-16 {
+  top: 111px;
+  left: 165px;
+}
+.edge-14 .block-1-sl-10 {
+  position: relative;
+}
+.edge-14 .img-sl-13 {
+  position: absolute;
+  top: 100px;
+  left: 81px;
+}
+.edge-14 .block-2-sl-4.iefix {
+  height: 228px;
 }
 .loader-bg {
   background: #ffffff;
